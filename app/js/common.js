@@ -40,6 +40,7 @@ $(function() {
                 return false;
             }
         }
+        return false;
     });
     // $(".sf-menu").superfish({
     //     cssArrows: false
