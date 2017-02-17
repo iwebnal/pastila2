@@ -300,6 +300,7 @@ li
 	cursor: pointer
 	border-radius: 5px
 	text-align: left
+	background: #fff
 	// max-width: 390px
 	// margin-right: auto
 	// margin-left: auto
@@ -315,9 +316,11 @@ li
 	height: 40px
 	width: 100%
 	border: none
-	background: #fff//transparent
+	background: transparent
 	outline: none
 	padding: 0 12px
+	position: relative
+	z-index: 4
 	// letter-spacing: 0.02em
 	// font-family: "PT Sans"
 	// font-size: 18px
@@ -598,21 +601,21 @@ li
 	td
 		padding: 18px 12px 0 12px
 		.az-dotted
-			position: relative
+			// position: relative
 			span
-				background: #f7f7f7
+				// background: #f7f7f7
 				display: inline-block
-				position: relative
-				z-index: 2
+				// position: relative
+				// z-index: 2
 				color: #333
 			&::before
-				content: ''
-				position: absolute
-				bottom: 3px
-				right: 1px
-				border-bottom: 1px dotted #333
-				width: 185px
-				z-index: 1
+				// content: ''
+				// position: absolute
+				// bottom: 3px
+				// right: 1px
+				// border-bottom: 1px dotted #333
+				// width: 185px
+				// z-index: 1
 	td:last-child
 		width: 187px
 	tr:last-child
@@ -622,11 +625,11 @@ li
 		// display: inline-block
 		td
 			.az-dotted
-				position: relative
+				// position: relative
 				span
 					line-height: 23px
 				&::before
-					bottom: 5px
+					// bottom: 5px
 		td:first-child
 			font-family: "RobotoCondensedBold", sans-serif
 			color: #333
@@ -638,6 +641,7 @@ li
 			color: #333
 			font-size: 18px
 			line-height: 20px
+			padding-right: 25px
 .az-tab-prev-next
 	padding: 15px
 	font-size: 0

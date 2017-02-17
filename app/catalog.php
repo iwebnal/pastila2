@@ -262,7 +262,7 @@
 							<select>
 								<option value="1">Особенность</option>
 								<option value="2">Особенность2</option>
-								<option value="3">Особенность3</option>
+								 <option value="3">Особенность3</option>
 								<option value="4">Особенность4</option>
 								<option value="5">Особенность5</option>
 								<option value="6">Особенность6</option>
