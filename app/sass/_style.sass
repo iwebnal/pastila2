@@ -1,0 +1,703 @@
+@import "bourbon"
+@import "fonts"
+@import "libs"
+@import "vars"
+
+
+.container-fluid
+	max-width: 1230px
+
+a, a:hover, a:active, a:focus
+	text-decoration: none
+	outline: none
+	color: #fff
+li
+	list-style: none
+.ah-topmnu-list li a
+	.az-ah-topmnu-list1:hover
+		color: #eb1282
+	.az-ah-topmnu-list2:hover
+		color: #7f77a7
+	.az-ah-topmnu-list3:hover
+		color: #56bfcb
+	.az-ah-topmnu-list4:hover
+		color: #b5799e
+	.az-ah-topmnu-list5:hover
+		color: #90ceb0
+	.az-ah-topmnu-list6:hover
+		color: #ee66ac
+
+.az-static
+	position: static !important
+
+.az-topmnu
+	background: #7d7d7d
+	height: 32px
+	font-size: 0
+	padding-top: 7px
+	position: relative
+
+.az-menu
+	position: absolute
+	border-top: 1px solid #fff
+	top: 100%
+	left: 0
+	width: 100%
+	z-index: 6
+	background: #7d7d7d
+	display: none
+	font-family: "RobotoCondensedLight"
+	font-size: 24px
+	line-height: 32px
+	color: #fff
+	padding-bottom: 15px
+	>li>a
+		color: #fff
+		display: inline-block
+		padding: 0 7px
+		width: 100%
+		height: 35px
+		line-height: 35px
+		i
+			transition: transform .3s ease-in-out
+			transform: rotate(0deg)
+		&:hover, &.active
+			background: #969696
+			color: #d4d4d4
+		&.active
+			i
+				transform: rotate(-90deg)
+	ul>li>a
+		color: #fff
+		display: inline-block
+		padding: 0 17px
+		width: 100%
+		height: 35px
+		line-height: 35px
+		font-size: 16px
+		white-space: nowrap
+		&:hover, &.active
+			background: #969696
+			color: #d4d4d4
+	ul
+		display: none
+.az-cart-menu, .az-user-menu
+	padding-left: 36px
+	height: 46px
+	display: inline-block
+	width: 100%
+	line-height: 46px
+	color: #fff
+	&:hover
+		color: #fff
+.az-cart-menu
+	text-transform: uppercase
+	background: #969696 url(../img/az-cart.png) no-repeat 7px center
+.az-user-menu
+	// text-transform: uppercase
+	background: url(../img/az-user.png) no-repeat 7px center
+.az-co
+	.az-inner-close
+		display: none
+	.az-inner-burger
+		display: inline-block
+.az-close
+	.az-inner-burger
+		display: none
+	.az-inner-close
+		display: inline-block
+
+
+.az-right-mob-menu
+	li
+		display: inline-block
+		margin-left: 18px
+		font-size: 0
+		vertical-align: top
+		position: relative
+		&:first-child
+			margin-left: 0
+
+.az-cart2
+	display: inline-block
+	margin-top: -7px
+	margin-right: -15px
+	padding-right: 15px
+	padding-left: 15px
+	padding-top: 7px
+	background: #e64797
+	height: 32px
+	.az-num
+		font-size: 14px
+		font-family: "ArimoBold"
+		color: #fff
+		vertical-align: top
+		margin-left: 10px
+		display: inline-block
+
+
+.az-search-clicked
+	display: block
+	position: absolute
+	top: 0
+	right: 0
+	width: 50px
+	opacity: 0
+	z-index: -1
+	transition: all 0.3s ease-in-out
+	padding-right: 20px
+	&.active
+		width: 130px
+		opacity: 1
+		z-index: 3
+		button[type="submit"]
+			z-index: 4
+	button[type="submit"]
+		border: none
+		background: none
+		position: absolute
+		top: 0
+		right: 0
+		padding: 0
+		width: 16px
+		// z-index: -1
+	input[type="text"]
+		margin-top: -2px
+		height: 20px
+		line-height: 20px
+		width: 100%
+		color: #4b2b24
+		font-family: "RobotoCondensedLight"
+		font-size: 14px
+
+/*vertical slider*/
+.ah-hits-wrapp
+	position: relative
+	cursor: pointer
+	&:hover
+		.az-carousel-wrap
+			opacity: 1
+			z-index: 3
+.az-carousel-wrap
+	position: absolute
+	top: -11px
+	left: -60px
+	
+	// opacity: 1
+	// z-index: 3
+	width: calc(100% + 60px)
+	height: calc(100% + 22px)
+	overflow: hidden
+	border: 2px solid #e3e3e3
+	opacity: 0
+	z-index: -1
+	transition: all 0.5s ease-in-out
+	&.slyle2
+		left: unset
+		right: -60px
+		.az-carousel-outer
+			margin-left: auto
+			padding: 27px 18px 27px 0
+			.prev, .next
+				left: unset
+				right: 14px
+	.az-carousel-outer
+		width: 60px
+		background: #fff
+		// padding-left: 12px
+		// position: relative
+		padding: 27px 0px 27px 18px
+		font-size: 0
+		.prev, .next
+			position: absolute
+			// top: 0
+			left: 14px
+			// transform: translate(-50%, 0)
+			border: none
+			width: 48px
+			line-height: 17px
+			height: 17px
+			text-align: center
+			font-size: 20px
+			color: #333333
+			
+			&:hover
+				color: #56cafb
+		.prev
+			top: 0
+			background: url(../img/az-arrow-up.png) no-repeat center top
+			vertical-align: top
+			i
+				margin-top: -5px;
+				position: relative;
+				display: block;
+			// height: 17px
+		.next
+			bottom: 0
+			background: url(../img/az-arrow-down.png) no-repeat center bottom
+			// height: 17px
+.az-carousel
+	li
+		img
+			margin-bottom: 15px
+			width: 37px
+			height: 77px
+
+/*filter*/
+.az-title-wrap
+	display: block
+	text-align: center
+	position: relative
+	z-index: 2
+	font-size: 0
+	&.style2
+		&::before
+			bottom: 12px
+	&.style3
+		margin-bottom: 10px
+	&.style4
+		&::before
+			bottom: 6px
+		margin-top: 30px
+		margin-bottom: 20px
+		.az-title
+			font-size: 18px
+			text-transform: uppercase
+			padding: 0 5px
+	&::before
+		content: ''
+		bottom: 8px
+		position: absolute
+		width: 100%
+		height: 1px
+		background: #e3e3e3
+		left: 0
+	.az-title
+		font-family: "RobotoCondensedLight"
+		font-size: 26px
+		color: #333333
+		display: inline-block
+		z-index: 3
+		background: #fff
+		position: relative
+		z-index: 3
+		padding: 0 14px
+
+.ah-product-link.style2
+	background: #56cafb
+	padding-right: 0
+	margin: 12px 0 6px 0
+	&:hover
+		background: #fff
+.az-filter-back
+	background: #f7f7f7
+	padding: 8px 0 20px 0
+	// display: none
+/*select*/
+.az-select
+	border: 1px solid #d1d1d1
+	position: relative
+	cursor: pointer
+	border-radius: 5px
+	text-align: left
+	// max-width: 390px
+	// margin-right: auto
+	// margin-left: auto
+	font-family: "RobotoCondensedLight"
+	font-size: 18px
+	z-index: 3
+	margin-top: 8px
+	/*overflow: hidden;*/
+
+.az-select-focus
+	z-index: 4
+.az-select select
+	height: 40px
+	width: 100%
+	border: none
+	background: #fff//transparent
+	outline: none
+	padding: 0 12px
+	// letter-spacing: 0.02em
+	// font-family: "PT Sans"
+	// font-size: 18px
+
+	cursor: pointer
+	-webkit-appearance: none
+	-moz-appearance: none
+
+.az-select select::-ms-expand
+	display: none;
+
+.az-select .az-options
+	display: none
+	top: 100%//calc(100% - 3px)
+	left: -1px
+	width: calc(100% + 2px)
+	position: absolute
+	background: rgba(86,202,251,.95)
+	border-radius: 2px
+	padding: 10px 0px
+	z-index: 6
+
+.az-select .az-options div[data-val]
+	// font-size: 18px
+	// font-family: "PT Sans"
+	color: #fff
+	padding: 5px 17px
+	line-height: 28px
+	// letter-spacing: 0.02em
+	cursor: pointer
+	// float: left
+	width: 100%
+
+.az-select .az-options div[data-val]:hover
+	background: #30b0e6//rgba(76,192,231,1)// background: rgba(255,255,255,0.1)
+	color: #fff
+
+.az-select::before
+	content: ''
+	position: absolute
+	top: 50%
+	transform: translate(0, -50%)
+	right: -1px
+	width: 42px
+	height: 42px
+	background: #56cafb url(../img/az-select-arrow.png) no-repeat center center
+	z-index: 3
+	border-radius: 5px
+
+.az-select-focus::before
+	transform: translate(0, -50%) rotate(180deg)
+	// border-top-left-radius: 2px
+	// border-bottom-left-radius: 2px
+	// border-top-right-radius: 0px
+	// border-bottom-right-radius: 0px
+	/*background: url(../img/select-arrow-focus.png) no-repeat top left;*/
+
+
+/*select*/
+.az-filter-right
+	text-align: center
+.az-filter-del
+	margin-left: 26px
+	font-family: "RobotoCondensedLight"
+	color: #333
+	font-size: 23.5px
+	text-decoration: underline
+	display: inline-block
+	position: relative
+	margin-top: 12px
+	&:hover
+		color: #333
+	&::before
+		content: ''
+		position: absolute
+		top: 50%
+		left: -26px
+		width: 26px
+		height: 25px
+		transform: translate(0, -50%)
+		background: url(../img/az-cross.png) no-repeat center
+.az-sort
+	margin-top: 10px
+	font-size: 0
+	width: 100%
+	// float: none !important
+.az-filter-t2
+	display: inline-block
+	font-size: 16px
+	line-height: 20px
+	color: #333
+	font-family: "RobotoCondensedLight"
+.az-filter-num
+	margin-top: 32px
+.az-filter-num-text
+	font-size: 14px
+	font-family: "RobotoCondensedLight"
+	color: #333
+	line-height: 20px
+	a
+		color: #56cafb
+		text-decoration: underline
+		&:hover
+			text-decoration: none
+.az-padination
+	text-align: center
+	margin-top: 30px
+	ul>li
+		display: inline-block
+		margin: 0 3px
+		&:nth-child(2)
+			margin-left: 0
+		&:nth-last-child(2)
+			margin-right: 0
+		a
+			display: inline-block
+			border: 1px solid #d1d1d1
+			border-radius: 4px
+			height: 29px
+			padding: 0 10px
+			color: #333
+			font-family: "RobotoCondensedLight"
+			line-height: 27px
+			font-size: 14px
+			&:hover
+				border: 1px solid #56cafb
+				background: #56cafb
+				color: #fff
+
+
+
+.az-breadcrumbs
+	font-size: 0
+	margin: 8px 0
+	ul
+		li
+			display: inline-block
+			margin-right: 18px
+			position: relative
+			&::before
+				content: '/'
+				color: #7d7d7d
+				position: absolute
+				font-size: 12px
+				top: 0
+				right: -11px
+				font-family: "RobotoCondensedRegular"
+			&:last-child
+				margin-right: 0
+				&::before
+					display: none
+			a
+				color: #7d7d7d
+				font-size: 12px
+				font-family: "RobotoCondensedRegular"
+				&:hover
+					text-decoration: underline
+			span
+				color: #56cafb
+				font-size: 12px
+				font-family: "RobotoCondensedRegular"
+
+
+.az-tabs
+	display: table
+	width: calc(100% + 30px)
+	height: 50px
+	text-align: center
+	margin-left: -15px
+	margin-right: -15px
+	li
+		display: table-cell
+		vertical-align: middle
+		position: relative
+		&:last-child
+			&::before
+				display: none
+		&::before
+			content: ''
+			position: absolute
+			top: 0
+			right: -18px
+			border-top: 25px solid transparent
+			border-bottom: 25px solid transparent
+			width: 0
+			height: 0
+			z-index: 2
+		&.az-tab-cond1
+			background: #d5d5d5
+			&::before
+				border-left: 18px solid #d5d5d5
+			&::after
+				content: ''
+				position: absolute
+				bottom: -12px
+				left: 50%
+				border-top: 12px solid #d5d5d5
+				border-left: 12px solid transparent
+				border-right: 12px solid transparent
+				width: 0
+				height: 0
+				z-index: 2
+		&.az-tab-cond2
+			background: #e3e3e3
+			&::before
+				border-left: 18px solid #e3e3e3
+		&.az-tab-cond3
+			background: #f7f7f7
+			&::before
+				border-left: 18px solid #f7f7f7
+		a
+			color: #333
+			font-family: "RobotoCondensedLight"
+			font-size: 14px
+			display: inline-block
+		#az-tab-basket
+			margin-right: 0px
+			padding-left: 25px
+			background: url(../img/az-tabico1.png) no-repeat left center
+		#az-tab-contact
+			margin-left: 18px//0 9px
+			padding-left: 17px
+			background: url(../img/az-tabico2.png) no-repeat left center
+		#az-tab-confirm
+			margin-left: 18px//9px
+			padding-left: 19px
+			background: url(../img/az-tabico3.png) no-repeat left center
+
+.az-tab-cont
+	margin-top: 20px
+	margin-left: -15px
+	margin-right: -15px
+
+.az-table-basket
+	background: #f7f7f7
+	width: 100%
+	text-align: center
+	.az-basket-img
+		display: inline-block
+		height: 80px
+		width: 80px
+		text-align: center
+		vertical-align: middle
+		border: 1px solid #dfdfdf
+		background: #fff
+		img
+			max-height: 100%
+			width: auto
+			display: inline-block
+	.az-basket-item-name
+		font-size: 14px
+		color: #333
+		font-family: "RobotoCondensedBold"
+		display: block
+	tr
+		border-bottom: 1px solid #e3e3e3
+	th
+		padding: 5px
+		height: 34px
+		vertical-align: bottom
+		font-size: 12px
+		color: #333
+		font-family: "RobotoCondensedRegular"
+	td
+		padding: 5px
+		vertical-align: middle
+		font-size: 14px
+		color: #333
+		font-family: "RobotoCondensedBold"
+
+.ah-cardproduct-formbox.az-style2
+	display: inline-block !important
+
+.az-basket-summ
+	width: 100%
+	background: #f7f7f7
+	text-align: right
+	td
+		padding: 18px 12px 0 12px
+		.az-dotted
+			position: relative
+			span
+				background: #f7f7f7
+				display: inline-block
+				position: relative
+				z-index: 2
+				color: #333
+			&::before
+				content: ''
+				position: absolute
+				bottom: 3px
+				right: 1px
+				border-bottom: 1px dotted #333
+				width: 185px
+				z-index: 1
+	td:last-child
+		width: 187px
+	tr:last-child
+		td
+			padding: 18px 12px
+	&.style2
+		// display: inline-block
+		td
+			.az-dotted
+				position: relative
+				span
+					line-height: 23px
+				&::before
+					bottom: 5px
+		td:first-child
+			font-family: "RobotoCondensedBold", sans-serif
+			color: #333
+			font-size: 14px
+			line-height: 20px
+			vertical-align: bottom
+		td:last-child
+			font-family: "RobotoCondensedLight", sans-serif
+			color: #333
+			font-size: 18px
+			line-height: 20px
+.az-tab-prev-next
+	padding: 15px
+	font-size: 0
+	a
+		vertical-align: middle
+		text-align: center
+		display: inline-block
+		background: #56cafb
+		font-size: 12px
+		font-family: "RobotoCondensedBold"
+		width: 49%
+		height: 40px
+		line-height: 40px
+		text-transform: uppercase
+		border-radius: 5px
+		margin-right: 2%
+		&:last-child
+			margin-right: 0
+		&:hover
+			background: transparent
+			border: 1px solid #56cafb
+			color: #56cafb
+			transition: color, border, background 0.6s ease 0s
+
+.az-tab2-wrap
+	margin-left: -15px
+	margin-right: -15px
+
+.az-tab-comment
+	padding: 20px 15px 0
+	.az-tab-comment-title
+		font-size: 18px
+		font-family: "RobotoCondensedRegular"
+	textarea
+		display: inline-block
+		// max-width: 46px
+		width: 100%
+		height: 275px
+		background: #fff
+		border: 1px solid #bababa
+		border-radius: 6px
+		box-shadow: inset 2.5px 4.3px 5px rgba(0, 0, 0, 0.3)
+		color: #4b2b24
+		font-family: "RobotoCondensedLight", sans-serif
+		font-size: 18px
+		outline: none
+		padding: 10px
+		margin-top: 3px
+		resize: none
+
+
+
+// .az-gray
+// 	background: #f7f7f7
+// 	.az-title
+// 		background: #f7f7f7
+// 	.ah-hits-wrapp
+// 		background: #fff
+
+//***********************************
+
+.az-xs-center
+	text-align: center

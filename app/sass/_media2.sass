@@ -1,0 +1,586 @@
+@import "bourbon"
+@import "vars"
+
+/*==========  Desktop First  ==========*/
+
+/* Large Devices, Wide Screens */
+@media only screen and (max-width : 1450px)
+	
+	/**/
+
+/* Large Devices, Wide Screens */
+@media only screen and (max-width : 1200px)
+	
+	/**/
+	
+
+/* Medium Devices, Desktops */
+@media only screen and (max-width : 992px)
+
+	
+	/**/
+
+/* Small Devices, Tablets */
+@media only screen and (max-width : 768px)
+	.az-w100
+		width: 100% !important
+	
+	/**/
+
+
+/* Extra Small Devices, Phones */
+@media only screen and (max-width : 480px)
+	.ah-cardproduct-form.az-style2
+		position: relative
+		input
+			width: 50px
+			height: 30px
+			position: relative
+			z-index: 2
+		.ah-card-plus
+			position: absolute
+			top: 88%
+			right: 0px
+			border-radius: 3px
+			background: #56cafb
+		.ah-card-min
+			position: absolute
+			border-radius: 3px
+			top: 88%
+			left: 0
+			background: #56cafb
+	
+	/**/
+
+
+/* Custom, iPhone Retina */
+@media only screen and (max-width : 320px)
+	/**/
+
+
+/*==========  Mobile First  ==========*/
+
+/* Custom, iPhone Retina */
+@media only screen and (min-width : 320px)
+	/**/
+
+
+/* Extra Small Devices, Phones */
+@media only screen and (min-width : 480px)
+	
+	/**/
+
+
+/* Small Devices, Tablets */
+@media only screen and (min-width : 768px)
+	.az-xs-center
+		text-align: left
+	.az-tab-comment
+		padding: 0
+		.az-tab-comment-title
+			font-size: 16px
+		textarea
+			height: 130px
+			font-size: 14px
+	.az-tab2-wrap
+		margin-left: 0
+		margin-right: 0
+	.az-table-basket
+		th:first-child
+			text-align: left
+			padding-left: 15px
+		th
+			font-size: 14px
+		.az-basket-item-name
+			float: right
+			text-align: left
+			width: calc(100% - 95px)
+			margin-top: 25px
+	.az-tab1-wrap
+		padding: 0 15px
+		max-width: 797px
+		margin-left: auto
+		margin-right: auto
+	.az-tab3-wrap
+		padding: 0 15px
+	.az-tab-prev-next
+		// text-align: right
+		width: 386px
+		margin-left: auto
+		padding: 20px 0 10px 0
+		a
+			font-size: 16px
+	.az-tabs
+		margin-left: 0
+		margin-right: 0
+		width: 100%
+		li
+			width: 33.33%
+	.az-padination
+		margin-bottom: 45px
+		ul>li
+			a
+				font-size: 16px
+	.az-filter-t2
+		font-size: 14px
+	.az-filter-back
+		background: #f7f7f7
+		padding: 20px 0 8px 0
+		margin: 10px 0 0
+	.az-sort
+		margin-top: 20px
+		width: 50%
+	.az-select
+		font-size: 14px
+		&.style2
+			font-size: 16px
+			margin-top: 0
+			margin-left: 16px
+			width: 230px
+			display: inline-block
+	.az-filter-right
+		text-align: right
+		.az-filter-del
+			font-size: 14px
+			&::before
+				background: url(../img/az-cross768.png) no-repeat center
+	.az-title-wrap
+		text-align: left
+		.az-title
+			font-size: 28px
+			padding-left: 0
+		&.style3
+			.az-title
+				font-size: 23px
+		&.style4
+			&::before
+				bottom: 5px
+			.az-title
+				font-size: 16px
+	.az-menu-wrapp
+		width: calc(100% - 205px)
+	.az-topmnu
+		height: 35px
+		padding-top: 0
+	.az-menu
+		position: relative
+		border-top: none
+		display: table
+		width: 100%
+		font-family: "RobotoCondensedLight"
+		font-size: 14px
+		line-height: 35px
+		height: 35px
+		color: #fff
+		padding-bottom: 0px
+		z-index: unset
+		>li
+			display: table-cell
+			vertical-align: middle
+			position: relative
+			text-align: center
+			>a
+				color: #fff
+				display: inline-block
+				padding: 0
+				width: unset
+				height: 35px
+				line-height: 35px
+				i
+					transform: none
+				&:hover, &.active
+					background: #7d7d7d
+					color: #d4d4d4
+					i
+						transform: none
+			ul
+				display: block
+				position: absolute
+				top: 130%
+				left: 20%
+				transform: translate(-20%, 0)
+				opacity: 0
+				z-index: -1
+				background: #fff
+				transition: all 0.3s ease-in-out
+				text-align: left
+				&::before
+					content: ''
+					position: absolute
+					top: -6px
+					left: 22%
+					// transform: translate(-25%, 0)
+					border-bottom: 6px solid #fff
+					border-left: 10px solid transparent
+					border-right: 10px solid transparent
+					width: 0
+					height: 0
+				>li>a
+					color: #333333
+					display: inline-block
+					padding: 0 9px
+					width: 100%
+					height: 35px
+					line-height: 35px
+					font-size: 16px
+					white-space: nowrap
+					&:hover, &.active
+						background: #eaeaea
+						color: #333333
+			&:hover
+				ul
+					top: 100%
+					opacity: 1
+					z-index: 6
+			>a.active+ul
+				top: 100%
+				opacity: 1
+				z-index: 6
+
+	.az-cart-menu, .az-user-menu
+		display: none
+	.az-co
+		display: none
+
+	.az-right-mob-menu
+		li
+			display: inline-block
+			margin-left: 0
+			font-size: 0
+			vertical-align: top
+			position: relative
+			height: 35px
+			line-height: 35px
+			&:hover
+				background: #9f9f9f
+			&::before
+				content: ''
+				position: absolute
+				top: 3px
+				left: 0px
+				background: #9f9f9f
+				width: 1px
+				height: calc(100% - 6px)
+			&:first-child
+				margin-left: 0
+
+	.az-cart2
+		display: inline-block
+		margin-top: 0px
+		margin-right: 0px
+		padding-right: 0px
+		padding-left: 0px
+		padding-top: 0px
+		background: transparent
+		height: 35px
+		line-height: 35px
+		span
+			margin-left: 7px
+		.az-num
+			font-size: 11px
+			font-family: "ArimoBold"
+			color: #fff
+			vertical-align: middle
+			text-align: center
+			margin-left: 7px
+			display: inline-block
+			width: 23px
+			height: 23px
+			line-height: 23px
+			border-radius: 50%
+			background: #56cafb
+			// margin-top: 
+		.az-sum
+			display: inline-block
+			font-size: 12px
+			vertical-align: middle
+			font-family: "RobotoCondensedRegular"
+		.az-bye
+			font-size: 10px
+			font-family: "RobotoCondensedBold"
+			width: 60px
+			vertical-align: middle
+			text-align: center
+			display: inline-block
+			background: #56cafb
+			height: 22px
+			line-height: 22px
+			text-transform: uppercase
+			border-radius: 5px
+			margin-right: 2px
+	.az-search-click
+		padding: 0 9px
+	.az-search-clicked
+		display: block
+		position: absolute
+		top: 0
+		right: unset
+		left: 100%
+		width: 50px
+		opacity: 0
+		z-index: -1
+		transition: all 0.3s ease-in-out
+		padding-right: 0px
+		padding-left: 0px
+		&.active
+			width: 170px
+			opacity: 1
+			z-index: 3
+			button[type="submit"]
+				z-index: 4
+		button[type="submit"]
+			border: none
+			background: none
+			position: absolute
+			top: 0
+			left: -25px
+			right: unset
+			padding: 0
+			// z-index: -1
+		input[type="text"]
+			margin-top: 2px
+			height: 30px
+			width: 100%
+			color: #4b2b24
+			font-family: "RobotoCondensedLight"
+			font-size: 14px
+	/**/
+
+
+/* Medium Devices, Desktops */
+@media only screen and (min-width : 992px)
+	/**/
+
+
+/* Large Devices, Wide Screens */
+@media only screen and (min-width : 1200px)
+	.az-filter-back
+		padding: 20px 0 30px
+	.az-filter-del
+		margin-top: 16px
+	.az-filter-left
+		width: calc(85% + 20px)
+		float: left
+		margin-right: -10px
+	.az-filter-right
+		width: 15%
+		margin-left: -10px
+		float: right
+	.az-tab-comment
+		.az-tab-comment-title
+			font-size: 18px
+		textarea
+			font-size: 18px
+			height: 277px
+	.az-filter-t2, .az-filter-num-text, .az-filter-right .az-filter-del
+		font-size: 16px
+	.az-select
+		font-size: 18px
+	.az-breadcrumbs
+		margin-top: 20px
+		ul
+			li
+				margin-right: 20px
+				a, span, &::before
+					font-size: 14px
+				&::before
+					right: -12px
+
+	.az-title-wrap
+		.az-title
+			font-size: 32px
+		&.style3
+			.az-title
+				font-size: 32px
+		&.style4
+			&::before
+				bottom: 7px
+			.az-title
+				font-size: 22px
+	.az-menu-wrapp
+		width: calc(100% - 350px)
+	.az-topmnu
+		height: 40px
+	.az-menu
+		position: relative
+		border-top: none
+		display: table
+		width: 100%
+		font-family: "RobotoCondensedLight"
+		font-size: 20px
+		line-height: 40px
+		height: 40px
+		>li
+			display: table-cell
+			vertical-align: middle
+			position: relative
+			text-align: center
+			>a
+				color: #fff
+				display: inline-block
+				padding: 0
+				width: unset
+				height: 40px
+				line-height: 40px
+
+				&:hover, &.active
+					background: #7d7d7d
+					color: #d4d4d4
+			ul
+				display: block
+				position: absolute
+				top: 130%
+				left: 10%
+				transform: translate(0, 0)
+				opacity: 0
+				z-index: -1
+				background: #fff
+				transition: all 0.3s ease-in-out
+				text-align: left
+				&::before
+					content: ''
+					position: absolute
+					top: -6px
+					left: 22%
+					// transform: translate(-25%, 0)
+					border-bottom: 6px solid #fff
+					border-left: 10px solid transparent
+					border-right: 10px solid transparent
+					width: 0
+					height: 0
+				>li>a
+					color: #333333
+					display: inline-block
+					padding: 0 9px
+					width: 100%
+					height: 35px
+					line-height: 35px
+					font-size: 16px
+					white-space: nowrap
+					&:hover, &.active
+						background: #eaeaea
+						color: #333333
+			&:hover
+				ul
+					top: 100%
+					opacity: 1
+					z-index: 6
+	.az-right-mob-menu
+		li
+			display: inline-block
+			margin-left: 0
+			font-size: 0
+			vertical-align: top
+			position: relative
+			height: 40px
+			line-height: 40px
+			&:hover
+				background: #9f9f9f
+			&::before
+				content: ''
+				position: absolute
+				top: 3px
+				left: 0px
+				background: #9f9f9f
+				width: 1px
+				height: calc(100% - 6px)
+			&:first-child
+				margin-left: 0
+
+	.az-cart2
+		display: inline-block
+		margin-top: 0px
+		margin-right: 0px
+		padding-right: 0px
+		padding-left: 0px
+		padding-top: 0px
+		background: transparent
+		height: 40px
+		line-height: 40px
+		span
+			margin-left: 13px
+		.az-num
+			font-size: 14px
+			font-family: "ArimoBold"
+			color: #fff
+			vertical-align: middle
+			text-align: center
+			margin-left: 13px
+			display: inline-block
+			width: 30px
+			height: 30px
+			line-height: 30px
+			border-radius: 50%
+			background: #56cafb
+			// margin-top: 
+		.az-sum
+			display: inline-block
+			font-size: 16px
+			vertical-align: middle
+			font-family: "RobotoCondensedRegular"
+		.az-bye
+			font-size: 14px
+			font-family: "RobotoCondensedBold"
+			width: 99px
+			vertical-align: middle
+			text-align: center
+			display: inline-block
+			background: #56cafb
+			height: 31px
+			line-height: 31px
+			text-transform: uppercase
+			border-radius: 5px
+			margin-right: 5px
+		.az-img-cart2
+			margin-left: 12px
+	.az-search-click
+		padding: 0 14px
+		&:hover+.az-search-clicked
+			width: 286px
+			opacity: 1
+			z-index: 3
+			button[type="submit"]
+				z-index: 4
+	.az-search-clicked
+		display: block
+		position: absolute
+		top: 0
+		right: unset
+		left: 100%
+		width: 50px
+		opacity: 0
+		z-index: -1
+		transition: all 0.3s ease-in-out
+		padding-right: 0px
+		padding-left: 0px
+		&:hover, &.active
+			width: 286px
+			opacity: 1
+			z-index: 3
+			button[type="submit"]
+				z-index: 4
+		button[type="submit"]
+			border: none
+			background: none
+			position: absolute
+			top: 0
+			left: -44px
+			right: unset
+			padding: 0 14px
+
+			// z-index: -1
+		input[type="text"]
+			margin-top: 3px
+			height: 34px
+			width: 100%
+			color: #4b2b24
+			padding: 0 8px
+			font-family: "RobotoCondensedLight"
+			font-size: 14px
+	/**/
+
+/* Large Devices, Wide Screens */
+@media only screen and (min-width : 1865px)
+	
+	/**/
+

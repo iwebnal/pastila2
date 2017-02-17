@@ -1,0 +1,1151 @@
+@import "bourbon"
+@import "fonts"
+@import "libs"
+@import "vars"
+@import "style"
+
+ul
+	padding: 0
+	margin: 0
+body
+	overflow-x: hidden
+
+.az-table
+	display: table
+	width: 100%
+.no-padd
+	padding-left: 0
+	padding-right: 0
+.no-padd1
+	padding-right: 0
+	padding-left: 0
+.no-padd2
+	padding-left: 0
+.clear
+	clear: both
+//**************** Order *******************************
+.ah-orderwrapp22
+	text-align: right
+.ah-orderwrapp2
+	text-align: right
+	border-bottom: 1px solid #e3e3e3
+.ah-order-link
+	display: inline-block
+	font-family: "RobotoCondensedRegular", sans-serif
+	color: #56cafb
+	height: 20px
+	font-size: 14px
+	line-height: 15px
+	text-decoration: underline
+	background: url(../img/ah-order-img2.png) left center no-repeat
+	padding-left: 25px
+	&:hover
+		color: #f04fa2
+		background: url(../img/ah-order-img22.png) left center no-repeat
+		text-decoration: underline
+		transition: color, background 0.4s ease 0s
+.ah-order-span
+	display: inline-block
+	font-family: "RobotoCondensedBold", sans-serif
+	color: #333
+	font-size: 14px
+	line-height: 26px
+.ah-order-span1
+	display: inline-block
+	font-family: "RobotoCondensedLight", sans-serif
+	color: #333
+	font-size: 18px
+	line-height: 20px
+	float: right
+.ah-orderwrapp1
+	border-top: 1px solid #e3e3e3
+	padding: 14px 25px	
+.ah-orderwrapp
+	background: #f7f7f7
+	border: 3px solid transparent
+	cursor: pointer
+	margin-top: 20px
+	&:hover
+		border: 3px solid #e3e3e3
+		transition: 0.4s ease 0s
+.ah-order-toplist
+	margin-top: 25px
+	li
+		display: inline-block
+		margin-right: 33px
+		a
+			font-family: "RobotoCondensedRegular", sans-serif
+			color: #56cafb
+			font-size: 14px
+			line-height: 15px
+			text-decoration: underline
+			&:hover
+				color: #56cafb
+				text-decoration: underline
+		&:first-child
+			background: url(../img/ah-order-img1.png) left center no-repeat
+			padding-left: 30px
+		&:last-child
+			margin-right: 0px
+.ah-order-tabslist
+	margin-top: 18px
+	margin-bottom: 45px
+	text-align: center
+	li
+		display: inline-block
+		margin-right: 15px
+		a
+			display: inline-block
+			width: 187px
+			height: 40px
+			background: #56cafb
+			border-radius: 6px
+			font-family: "RobotoCondensedBold", sans-serif
+			color: #fff
+			font-size: 16px
+			line-height: 40px
+			text-align: center
+			text-transform: uppercase
+			&:hover
+				background: #c8c8c8
+				transition: background 0.7s ease 0s
+		&:last-child
+			margin-right: 0px
+	
+//***************** Enter ******************************
+.ah-reguser-form
+	padding: 35px 20px
+	.ah-reguser-form-span2
+		display: block//inline-block
+		color: #333
+		font-size: 12px
+		line-height: 20px
+		text-decoration: underline
+		margin-top: 10px
+		&:hover
+			color: #333
+			text-decoration: underline
+	.ah-reguser-form-span
+		display:block
+		font-family: "RobotoCondensedRegular", sans-serif
+		color: #333
+		font-size: 18px
+		line-height: 20px
+		margin-bottom: 6px
+	.ah-reguser-form-span1
+		display: block
+		font-family: "RobotoCondensedLight", sans-serif
+		color: #333
+		font-size: 12px
+		line-height: 20px
+		text-decoration: underline
+		margin-top: -30px
+		&:hover
+			color: #333
+			text-decoration: underline
+	input[type="text"]
+		width: 100%
+		height: 40px
+		background: #fff
+		border: 1px solid #bababa
+		border-radius: 6px
+		box-shadow: inset 2.5px 4.3px 5px rgba(0, 0, 0, 0.3)
+		font-family: "RobotoCondensedLight", sans-serif
+		color: #333
+		font-size: 18px
+		line-height: 20px
+		line-height: 40px
+		outline: none
+		margin-bottom: 40px
+		padding-left: 15px
+	input[type="submit"]
+		width: 187px
+		height: 40px
+		font-family: "RobotoCondensedBold", sans-serif
+		color: #fff
+		font-size: 16px
+		line-height: 40px
+		text-transform: uppercase
+		background: #56cafb
+		border-radius: 6px
+		border: 1px solid #56cafb
+		outline: none
+		cursor: pointer
+		margin-top: 18px
+		&:hover
+			color: #56cafb
+			border: 1px solid #56cafb
+			background: transparent
+			transition: color, background 0.6s ease 0s
+.ah-newuser-form
+	padding: 35px 20px
+	background: #f7f7f7
+	margin-bottom: 30px
+	.ah-newuser-margtop
+		display: block
+		margin-top: 40px
+	.ah-newuser-form-span
+		display:block
+		font-family: "RobotoCondensedRegular", sans-serif
+		color: #333
+		font-size: 18px
+		line-height: 20px
+		margin-bottom: 6px
+	.ah-newuser-form-span1
+		display: block
+		font-family: "RobotoCondensedLight", sans-serif
+		color: #333
+		font-size: 12px
+		line-height: 20px
+		text-decoration: underline
+		margin-top: -30px
+		&:hover
+			color: #333
+			text-decoration: underline
+	input[type="text"]
+		width: 100%
+		height: 40px
+		background: #fff
+		border: 1px solid #bababa
+		border-radius: 6px
+		box-shadow: inset 2.5px 4.3px 5px rgba(0, 0, 0, 0.3)
+		font-family: "RobotoCondensedLight", sans-serif
+		color: #333
+		font-size: 18px
+		line-height: 20px
+		line-height: 40px
+		outline: none
+		margin-bottom: 40px
+		padding-left: 15px
+	input[type="submit"]
+		width: 187px
+		height: 40px
+		font-family: "RobotoCondensedBold", sans-serif
+		color: #fff
+		font-size: 16px
+		line-height: 40px
+		text-transform: uppercase
+		background: #56cafb
+		border-radius: 6px
+		border: 1px solid #56cafb
+		outline: none
+		cursor: pointer
+		margin-top: 18px
+		&:hover
+			color: #56cafb
+			border: 1px solid #56cafb
+			background: transparent
+			transition: color, background 0.6s ease 0s
+
+
+
+
+//******************* CardProduct *********************
+.ah-i4
+	img
+		width: 31px !important
+		height: 61px !important
+.ah-i5
+	img
+		width: 32px !important
+		height: 66px !important
+.ah-i5s
+	img
+		width: 32px !important
+		height: 66px !important
+.ah-i7
+	img
+		width: 36px !important
+		height: 73px !important
+.ah-i72
+	img
+		width: 36px !important
+		height: 73px !important
+.ah-i7pl
+	img
+		width: 42px !important
+		height: 85px !important
+.ah-i7pl2
+	img
+		width: 42px !important
+		height: 85px !important
+.ah-carddescription
+	margin-top: 50px
+	// margin-left: 15px
+	// margin-right: 15px
+.ah-carddescription-title
+	position: relative
+	display: block
+	font-family: "RobotoCondensedLight", sans-serif
+	color: #333
+	font-size: 32px
+	line-height: 18px
+	&::before
+		position: absolute
+		content: ""
+		width: 90%
+		height: 1px
+		right: 0px
+		bottom: 0px
+		background: #e3e3e3
+.ah-carddescription-textwrapp
+	padding: 20px 15px 20px 15px
+	p
+		display: block
+		font-family: "ArimoRegular", sans-serif
+		color: #585a72
+		font-size: 24px
+.ah-carddescription-texttitle
+	display: block
+	font-family: "ArimoBold", sans-serif
+	color: #000
+	font-size: 32px
+	text-transform: uppercase
+	line-height: 27px
+	span
+		display: block
+		font-family: "RobotoCondensedLight", sans-serif
+		color: #333
+		font-size: 24px
+.ah-carddescription-imgbox
+	text-align: center
+	padding-top: 20px
+.ah-cardproduct-modtitle
+	position: relative
+	display: block
+	font-family: "RobotoCondensedLight", sans-serif
+	color: #333
+	font-size: 22px
+	line-height: 20px
+	text-transform: uppercase
+	margin-bottom: 15px
+	margin-top: 38px
+	&::before
+		position: absolute
+		content: ""
+		width: 37%
+		height: 1px
+		right: 0px
+		bottom: 0px
+		background: #e3e3e3
+.ah-cardproduct-slider2title
+	position: relative
+	display: block
+	font-family: "RobotoCondensedLight", sans-serif
+	color: #333
+	font-size: 22px
+	line-height: 20px
+	text-transform: uppercase
+	margin-bottom: 15px
+	&::before
+		position: absolute
+		content: ""
+		width: 80%
+		height: 1px
+		right: 0px
+		bottom: 0px
+		background: #e3e3e3
+.ah-cardproduct-title
+	display: block
+	font-family: "RobotoCondensedLight", sans-serif
+	color: #56cafb
+	font-size: 32px
+	line-height: 32px
+	margin-bottom: 10px
+	text-align: center
+.ah-cardproduct-infoblck
+	display: table
+	padding-top: 35px
+	margin-top: 25px
+	width: 100%
+	border-top: 2px solid #e3e3e3
+.ah-cardlink-box
+	display: block !important
+	width: 100%
+	margin-top: 30px
+	// vertical-align: bottom
+.ah-cardlink
+	display: inline-block
+.ah-cardbuttbox-span1
+	display: inline-block
+	font-family: "RobotoCondensedRegular", sans-serif
+	color: #4db582
+	font-size: 14px
+	line-height: 20px
+	background: url(../img/ah-card-lik.png) left center no-repeat
+	padding-left: 30px
+.ah-cardbuttbox-span2
+	display: inline-block
+	font-family: "RobotoCondensedRegular", sans-serif
+	color: #ed5fa9
+	font-size: 14px
+	line-height: 20px
+	background: url(../img/ah-card-close.png) left center no-repeat
+	padding-left: 30px
+	margin-top: 18px
+.ah-cardproduct-price
+	display: table-cell !important
+	font-size: 40px !important//50px !important
+	margin-top: 0px !important
+	vertical-align: bottom
+	width: 118px//155px
+	.ah-fa
+		font-size: 30px!important //40px!important
+.ah-cardproduct-formbox
+	display: table-cell
+	padding-left: 0px
+	padding-right: 0px
+	vertical-align: bottom
+	text-align: center
+	span
+		display: inline-block
+		font-family: "RobotoCondensedRegular", sans-serif
+		color: #000
+		font-size: 14px
+		line-height: 15px
+		margin-right: 12px
+.ah-cardproduct-form
+	display: inline-block
+	input[type="text"]
+		display: inline-block
+		max-width: 46px
+		height: 40px
+		background: #fff
+		border: 1px solid #bababa
+		border-radius: 6px
+		box-shadow: inset 2.5px 4.3px 5px rgba(0, 0, 0, 0.3)
+		color: #4b2b24
+		font-family: "RobotoCondensedLight", sans-serif
+		font-size: 14px
+		outline: none
+		padding: 0px 4px
+.ah-card-plus, .ah-card-min
+	display: inline-block
+	font-family: "RobotoCondensedBold", sans-serif
+	width: 20px
+	height: 20px
+	border-radius: 50%
+	color: #fff
+	font-size: 18px
+	line-height: 18px
+	background: #7d7d7d
+	text-align: center
+
+.ah-cardproduct-buttonbox
+	display: inline-block
+	float: right
+	margin-top: 20px
+	width: 100%
+	text-align: center
+.ah-cardlist
+	text-align: center
+	li
+		display: inline-block
+		margin-right: 9px
+		&:last-child
+			margin-right: 0px
+		a
+			text-align: center
+.ah-cardlist-imgbox
+	img
+		margin: 0 auto
+.ah-cardlist-text
+	display: block
+	font-family: "RobotoCondensedBold", sans-serif
+	color: #7d7d7d
+	font-size: 10px
+	line-height: 15px
+	text-decoration: underline
+	margin-top: 20px
+.arrow-left22
+	position: absolute
+	content: ""
+	width: 50px
+	height: 50px
+	background: url(../img/ah-slider2-left.png) center center no-repeat #fff
+	border-radius: 50%
+	border: 1px solid #dfdfdf
+	left: -25px
+	top: 15%
+.arrow-right22
+	position: absolute
+	content: ""
+	width: 50px
+	height: 50px
+	background: url(../img/ah-slider2-right.png) center center no-repeat #fff
+	border-radius: 50%
+	border: 1px solid #dfdfdf
+	right: -25px
+	top: 15%
+.ah-cardproduct-slider
+	position: relative
+	height: 121px
+.ah-cardproduct-slider2
+	position: relative
+	height: auto
+.ah-cardproduct-imgbox1
+	cursor: pointer
+	img
+		width: 43px !important
+		height: 85px !important
+		margin: 0 auto
+.ah-cardproduct-imgbox2
+	img
+		width: 42px !important
+		height: 80px !important
+		margin: 0 auto
+.ah-cardproduct-imgbox
+	border: 1px solid #dfdfdf
+	text-align: center
+	padding: 12px 50px 25px 50px
+	margin-bottom: 6px
+	img
+		margin: 0 auto
+		max-width: 316px
+		width: 100%
+.ah-cardproduct-imgbox1
+	border: 1px solid #dfdfdf
+	text-align: center
+	padding: 6px 0px 6px 0px
+.ah-cardproduct-imgbox2
+	border: 1px solid #dfdfdf
+	text-align: center
+	padding: 6px 0px 6px 0px
+
+
+
+//*****************************************************
+.ah-advantages
+	background: #f7f7f7
+	padding: 15px 25px
+	text-align: center
+	margin-top: 25px
+.ah-advbox
+	display: table
+	width: 268px
+	margin-left: auto
+	margin-right: auto
+	margin-bottom: 15px
+	text-align: left
+	.ah-advimg
+		display: table-cell
+		width: 115px
+	span
+		display: table-cell
+		font-family: "RobotoCondensedBold", sans-serif
+		color: #333
+		font-size: 13px
+		line-height: 16px
+		text-transform: uppercase
+		vertical-align: middle
+		padding-left: 20px
+.ah-product-item
+	display: block
+	padding: 9px 5px
+.ah-product-link
+	display: inline-block
+	font-family: "RobotoCondensedBold", sans-serif
+	color: #fff
+	font-size: 16px
+	line-height: 15px
+	text-transform: uppercase
+	width: 100%
+	height: 40px
+	line-height: 40px
+	text-align: center
+	background: url(../img/svg/v.svg) calc(50% - -65px) center no-repeat #56cafb
+	padding-right: 20px
+	border-radius: 6px
+	margin-top: 13px
+	border: 1px solid #56cafb
+	&:hover
+		border: 1px solid #56cafb
+		color: #56cafb
+		background: url(../img/svg/v_b.svg) calc(50% - -65px) center no-repeat transparent
+		transition: border, color, background 0.6s ease 0s
+.ah-textbox
+	text-align: center
+	margin: 35px 0px 55px 0px
+.ah-textbox-title
+	display: block
+	font-family: "RobotoCondensedLight", sans-serif
+	color: #000
+	font-size: 32px
+	line-height: 30px
+	margin-bottom: 15px
+.ah-textbox-text
+	display: block
+	font-family: "RobotoCondensedLight", sans-serif
+	color: #000
+	font-size: 16px
+	line-height: 22px
+	margin-bottom: 22px
+.ah-textbox-link
+	display: block
+	font-family: "RobotoCondensedLight", sans-serif
+	color: #56cafb
+	font-size: 14px
+	line-height: 22px
+	text-decoration: underline
+	float: right
+	&:hover
+		&:hover
+			color: #a4a4a4
+			// color: #56cafb
+			text-decoration: underline
+.ah-foot-hidden
+	display: none !important
+.ah-header-tel
+	margin-top: 10px !important
+.ah-headr-mail768
+	display: block !important
+	float: left !important
+.ah-headr-mail
+	display: none !important
+.ah-topline-imgbox
+	padding-top: 25px
+	a
+		img
+			width: 135px
+			height: 49px
+.ah-topline
+	padding-bottom: 18px
+.ah-lpblock
+	padding-right: 0px
+.ah-lpblock-list1
+	display: block
+	float: right
+	li
+		display: inline-block
+.ah-header-map
+	display: inline-block
+	font-family: "RobotoCondensedBold", sans-serif
+	color: #333
+	font-size: 16px
+	line-height: 15px
+	text-transform: uppercase
+	background: url(../img/svg/location.svg) 1px top no-repeat
+	padding-left: 20px
+	margin-left: 8px
+	height: 19px
+	margin-top: 10px
+	&:hover
+		color: #56cafb//#333
+		background: url(../img/az-baloon.png) left top no-repeat
+		text-decoration: none
+.ah-block
+	position: relative
+	width: 100%
+	.owl-dots
+		position: absolute;
+		text-align: center;
+		margin-top: -30px;
+		width: 100%;
+		.owl-dot
+			display: inline-block
+			margin: 0px 10px
+			width: 20px
+			height: 20px
+			background-color: #fff
+			box-shadow: inset 2.5px 4.3px 5px rgba(0, 0, 0, 0.36)
+			border-radius: 50%
+		.active
+			display: inline-block
+			margin: 0px 10px
+			width: 20px
+			height: 20px
+			background: url(../img/ah-dotactive.png) center center no-repeat #fff
+			box-shadow: inset 2.5px 4.3px 5px rgba(0, 0, 0, 0.36)
+			border-radius: 50%
+	.item
+		width: 100%
+		height: auto
+		padding-bottom: 45px
+		background: url(../img/ah-slide-fon320.jpg) left top no-repeat
+		background-size: cover
+.ah-content-title
+	display: block
+	font-family: "RobotoCondensedBold", sans-serif
+	font-size: 64px
+	line-height: 51px
+	color: #fff
+	text-transform: uppercase
+	margin-top: 24px
+.ah-content-subtitle
+	display: inline-block
+	padding: 0px 8px
+	background: #e64797
+	color: #fff
+	font-family: "RobotoCondensedLight", sans-serif
+	font-size: 31px
+	line-height: 41px
+	margin-top: 7px
+.ah-content-box
+	max-width: 392px
+	float: right
+	margin-right: 0
+	margin-left: 15px
+.ah-content-list
+	padding: 0
+	margin: 0
+	margin-top: 3px
+	li
+		position: relative
+		display: block
+		font-family: "RobotoCondensedLight", sans-serif
+		font-size: 18px
+		line-height: 26px
+		color: #fff
+		padding-left: 10px
+		&::before
+			position: absolute
+			content: ""
+			background: url(../img/ah-slide-arr.png)
+			width: 8px
+			height: 7px
+			left: 0px
+			top: 12px
+.ah-content-span
+	display: block
+	font-family: "RobotoCondensedBold", sans-serif
+	font-size: 58px
+	line-height: 54px
+	text-transform: uppercase
+	color: #56cafb
+	span
+		font-size: 30px
+.ah-content-link
+	display: inline-block
+	border: 1px solid #fff
+	border-radius: 6px
+	padding: 13px 47px
+	color: #fff
+	font-family: "RobotoCondensedBold", sans-serif
+	font-size: 16px
+	line-height: 15px
+	text-transform: uppercase
+	margin-top: 10px
+	&:hover
+		color: #fff
+.arrow-right
+	position: absolute
+	content: ""
+	width: 60px
+	height: 60px
+	background: url(../img/ah-arr-right0.png) center center no-repeat rgba(0, 0, 0, 0.2)
+	border-radius: 50%
+	right: 3.5%
+	top: 44%
+	&:hover
+		background: url(../img/ah-arr-right.png) center center no-repeat rgba(0, 0, 0, 0.2)
+		transition: background 0.7s ease 0s
+.arrow-left
+	position: absolute
+	content: ""
+	width: 60px
+	height: 60px
+	background: url(../img/ah-arr-left0.png) center center no-repeat rgba(0, 0, 0, 0.2)
+	border-radius: 50%
+	left: 3.5%
+	top: 44%
+	&:hover
+		background: url(../img/ah-arr-left.png) center center no-repeat rgba(0, 0, 0, 0.2)
+		transition: background 0.7s ease 0s
+.ah-topmnu-list
+	margin-top: 30px
+	display: table
+	width: 126%
+	margin-left: -13%
+	margin-right: -13%
+	li
+		display: table-cell//inline-block
+		text-align: center
+		// margin-right: 5px
+		text-align: center
+		width: 16.66%
+		a
+			img
+				width: 37px
+				height: 32px
+			span
+				display: block
+				font-family: "RobotoCondensedBold", sans-serif
+				color: #333
+				font-size: 9px
+				line-height: 12px
+				text-transform: uppercase
+				margin-top: 13px
+			&:hover
+				span
+					color: #ee3394
+					text-decoration: underline
+					transition: color 0.5s ease 0s
+		&:last-child
+			margin-right: 0px
+.ah-lpblock-list
+	background: url(../img/ah-lp768.png) center center no-repeat
+	width: 170px//195px
+	height: 23px
+	text-align: center
+	padding-top: 0px
+	margin-left: auto
+	li
+		display: inline-block
+		a
+			display: inline-block
+			font-family: "RobotoCondensedLight", sans-serif
+			font-size: 12px;
+			line-height: 17px
+			color: #fff
+			text-decoration: underline
+			&:hover
+				color: #fff95a
+		span
+			display: inline-block
+			font-family: "RobotoCondensedLight", sans-serif
+			font-size: 12px;
+			line-height: 17px
+			color: #fff
+.ah-lpblock-link
+	background: url(../img/svg/person.svg) left center no-repeat
+	padding-left: 25px
+
+
+.ah-footer
+	// border-top: 1px solid #e3e3e3
+	padding: 28px 0px 12px 0px
+	text-align: center
+	// margin-top: 50px
+.ah-footimgbox
+	margin-top: 10px
+	padding-left: 0px
+	a
+		img
+			width: 92px
+			// height: 25px
+.ah-footinfo
+	border-top: 1px solid #e3e3e3
+	display: block
+	text-align: center
+	padding: 30px 5px 15px 5px
+	margin-top: 50px
+	background: #f7f7f7
+.ah-footinfo-span1, .ah-footinfo-span2
+	display: block
+	color: #000
+	font-size: 18px
+	line-height: 22px
+.ah-footinfo-span1
+	font-family: "ArimoBold", sans-serif
+	margin-bottom: 27px
+.ah-footinfo-span2
+	font-family: "ArimoRegular", sans-serif
+.ah-footinfo-list
+	display: block
+	margin-top: 36px
+	li
+		display: inline-block
+		a
+			display: inline-block
+			font-family: "RobotoCondensedBold", sans-serif
+			color: #fff
+			font-size: 16px
+			line-height: 15px
+			text-transform: uppercase
+			min-width: 145px
+			height: 40px
+			line-height: 40px
+			border-radius: 6px
+			padding-left: 20px
+.ah-footinfo-link1
+	float: left
+	background: url(../img/ah-fotinfo-tel.png) calc(0% + 13px) center no-repeat #56cafb
+.ah-footinfo-link2
+	float: right
+	background: url(../img/ah-fotinfo-mail.png) calc(0% + 15px) center no-repeat #56cafb
+.ah-footer-span0
+	display: none
+	color: #000
+	font-family: "RobotoCondensedBold", sans-serif
+	font-size: 16px
+	line-height: 22px
+	text-transform: uppercase
+	padding-left: 20px
+.ah-footer-span320
+	display: block
+	color: #000
+	font-family: "RobotoCondensedBold", sans-serif
+	font-size: 16px
+	line-height: 22px
+	text-transform: uppercase
+	margin-top: 32px
+	margin-bottom: 11px
+.ah-footer-span
+	display: block
+	color: #000
+	font-family: "RobotoCondensedBold", sans-serif
+	font-size: 16px
+	line-height: 22px
+	text-transform: uppercase
+	margin-top: 20px
+.ah-footer-list, .ah-footer-list1
+	li
+		display: inline-block
+		vertical-align: middle
+		margin-right: 5px
+		&:last-child
+			margin-right: 0px
+.ah-footer-list
+	// padding-left: 20px
+	li
+		margin-right: 14px
+		a
+			img
+				// width: 66px
+				// height: 40px
+.ah-footer-list1
+	li
+		a
+			img
+				width: 31px
+				height: 31px
+.ah-footer-list1
+	margin-top: 8px
+.ah-footer-tel
+	display: block
+	font-family: "RobotoCondensedRegular", sans-serif
+	color: #333
+	height: 27px
+	font-size: 16px
+	line-height: 22px
+	text-transform: uppercase
+	background: url(../img/svg/phone_1.svg) left center no-repeat
+	padding-left: 25px
+	float: right
+	&:hover
+		color: #333
+	span
+		font-family: "RobotoCondensedBold", sans-serif
+.ah-footer-mail
+	display: inline-block
+	font-family: "RobotoCondensedRegular", sans-serif
+	color: #56cafb
+	height: 15px
+	font-size: 14px
+	line-height: 15px//22px
+	text-decoration: underline
+	background: url(../img/svg/e-mail.svg) left bottom no-repeat
+	padding-left: 25px
+	float: right
+	margin-top: 5px
+	&:hover
+		color: #a4a4a4//#56cafb
+		background: url(../img/az-envelope.png) left bottom no-repeat
+		text-decoration: underline
+.ah-footer-span1
+	display: block
+	font-family: "RobotoCondensedLight", sans-serif
+	color: #a7a7a7
+	font-size: 12px
+	line-height: 15px
+	margin-top: 15px
+.ah-footlogobox
+	display: none
+	a
+		img
+			width: 109px
+			height: 32px
+.ah-slider2
+	display: none
+	margin-top: 30px
+.ah-slider22
+	display: block
+	margin-top: 30px
+.ah-block2
+	position: relative
+	width: 100%
+	margin-top: 13px
+	height: 234px
+	.item
+		width: 100%
+		height: 234px
+	// &::before
+	// 	position: absolute
+	// 	content: ""
+	// 	background: url(../img/ah-slider2-bordtop.png)
+	// 	width: 85%
+	// 	height: 1px
+	// 	right: 0px
+	// 	top: -13px
+.arrow-right2
+	position: absolute
+	content: ""
+	width: 50px
+	height: 50px
+	background: url(../img/ah-slider2-right.png) center center no-repeat #fff
+	border-radius: 50%
+	right: -25px
+	top: 40%
+.arrow-left2
+	position: absolute
+	content: ""
+	width: 50px
+	height: 50px
+	background: url(../img/ah-slider2-left.png) center center no-repeat #fff
+	border-radius: 50%
+	left: -25px
+	top: 40%
+.ah-hits, .ah-novelty
+	position: relative
+	margin-top: 20px
+	// &::before
+	// 	position: absolute
+	// 	content: ""
+	// 	background: url(../img/ah-hits-bord.png)
+	// 	width: 84%
+	// 	height: 1px
+	// 	right: 0px
+	// 	top: 21px
+.ah-novelty
+	margin-top: 20px
+	&::before
+		width: 88% !important
+.ah-clear992
+	display: none !important
+// .ah-clear768
+// 	display: none !important
+.ah-hits-wrapp
+	text-align: center
+	margin: 25px 0px
+.ah-hits-product, .ah-hits-model, .ah-hits-feature
+	display: block
+	color: #333
+	font-size: 16px
+	line-height: 20px
+.ah-hits-product
+	font-family: "RobotoCondensedBold", sans-serif
+	text-transform: uppercase
+	margin-top: 30px
+.ah-hits-model, .ah-hits-feature
+	font-family: "RobotoCondensedLight", sans-serif
+.ah-hits-price
+	display: block
+	font-family: "RobotoCondensedRegular", sans-serif
+	color: #56cafb
+	font-size: 32px
+	line-height: 1
+	// line-height: 18px
+	text-transform: uppercase
+	margin-top: 13px
+.ah-fa
+	color: #56cafb
+	font-size: 20px !important
+.ah-hits-link
+	display: block
+	font-family: "RobotoCondensedBold", sans-serif
+	color: #fff
+	font-size: 16px
+	line-height: 15px
+	text-transform: uppercase
+	background: #56cafb
+	border: 1px solid #56cafb
+	border-radius: 6px
+	height: 40px
+	line-height: 40px
+	text-align: center
+	margin-top: 35px
+	max-width: 290px
+	margin: 0 auto
+	&:hover
+		background: transparent
+		border: 1px solid #56cafb
+		color: #56cafb
+		transition: color, border, background 0.6s ease 0s
+.ah-hits-firsttitle
+	display: block
+	font-family: "RobotoCondensedLight", sans-serif
+	color: #333
+	font-size: 32px
+	line-height: 18px
+
+
+
+
+
+
+
+
+
+
+	
+
+
+//*************************** POPUP-Form *****************************************
+#small-dialog
+	text-align: left
+	max-width: 500px
+	margin: 40px auto
+	position: relative
+.common-form
+	display: block
+	padding: 38px 68px
+	background: #37474f
+	border-radius: 3px
+	box-sizing: border-box
+	.form-title
+		display: block
+		color: #fff
+		font-size: 41px
+		font-family: "PT Sans", sans-serif
+		margin-top: 15px
+	.form-subtitle
+		display: block
+		color: #fecc00
+		font-family: "PT Sans Bold", sans-serif
+		font-size: 18px
+		text-transform: uppercase
+		margin-top: 11px
+		margin-bottom: 15px
+	input[type="text"]
+		width: 100%
+		border-radius: 3px
+		box-sizing: border-box
+		border: 1px solid #fff
+		background: #37474f
+		color: #fff
+		font-family: "PT Sans", sans-serif
+		height: 33px
+		line-height: 33px
+		padding: 0px 18px
+		font-size: 14px
+		margin-top: 15px
+	input[type="submit"]
+		width: 100%
+		border-radius: 3px
+		box-sizing: border-box
+		border: none
+		background: #fecc00
+		color: #37474f
+		text-align: center
+		font-family: "PT Sans", sans-serif
+		height: 33px
+		line-height: 33px
+		padding: 0px 18px
+		font-size: 18px
+		text-transform: uppercase
+		margin-top: 10px
+		outline: none
+		cursor: pointer
+//***************************************************************************
+
+.ah-product-logobox
+	img
+		margin: 0 auto
+
+
+
+
+
+
+@import "media" // Всегда в конце
+@import "media2" // Всегда в конце
