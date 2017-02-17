@@ -342,7 +342,7 @@
 											<table class="az-basket-summ style2">
 												<tr>
 													<td>Итого:</td>
-													<td><span class="az-dotted"><span>15 592 500 р.</span></span></td>
+													<td>15 592 500 р.</td>
 												</tr>
 											</table>
 											<!-- <div class="ah-orderwrapp1 ah-orderwrapp22">
@@ -411,11 +411,11 @@
 												<table class="az-basket-summ">
 													<tr>
 														<td>Итого:</td>
-														<td><span class="az-dotted"><span>15 592 500 р.</span></span></td>
+														<td>15 592 500 р.</td>
 													</tr>
 													<tr>
 														<td>К оплате:</td>
-														<td><span class="az-dotted"><span>19 592 500 р.</span></span></td>
+														<td>19 592 500 р.</td>
 													</tr>
 												</table>
 											</div>
