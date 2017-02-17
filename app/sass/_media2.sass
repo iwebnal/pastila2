@@ -188,7 +188,7 @@
 				line-height: 35px
 				i
 					transform: none
-				&:hover, &.active
+				&.active, &:hover
 					background: #7d7d7d
 					color: #d4d4d4
 					i
@@ -227,11 +227,11 @@
 					&:hover, &.active
 						background: #eaeaea
 						color: #333333
-			&:hover
-				ul
-					top: 100%
-					opacity: 1
-					z-index: 6
+			// &:hover
+			// 	ul
+			// 		top: 100%
+			// 		opacity: 1
+			// 		z-index: 6
 			>a.active+ul
 				top: 100%
 				opacity: 1
@@ -465,6 +465,10 @@
 					top: 100%
 					opacity: 1
 					z-index: 6
+			>a.active+ul
+				top: 130%
+				opacity: 0
+				z-index: -1
 	.az-right-mob-menu
 		li
 			display: inline-block
