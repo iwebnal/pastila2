@@ -192,15 +192,16 @@ li
 	opacity: 0
 	z-index: -1
 	transition: all 0.5s ease-in-out
-	&.slyle2
-		left: unset
-		right: -60px
-		.az-carousel-outer
-			margin-left: auto
-			padding: 27px 18px 27px 0
-			.prev, .next
-				left: unset
-				right: 14px
+	// &.slyle2
+	// &:nth-child(6n)
+	// 	left: unset
+	// 	right: -60px
+	// 	.az-carousel-outer
+	// 		margin-left: auto
+	// 		padding: 27px 18px 27px 0
+	// 		.prev, .next
+	// 			left: unset
+	// 			right: 14px
 	.az-carousel-outer
 		width: 60px
 		background: #fff
@@ -242,7 +243,16 @@ li
 			margin-bottom: 15px
 			width: 37px
 			height: 77px
-
+div[class^="col-"]:nth-of-type(6n+2)
+	.az-carousel-wrap
+		left: unset
+		right: -60px
+		.az-carousel-outer
+			margin-left: auto
+			padding: 27px 18px 27px 0
+			.prev, .next
+				left: unset
+				right: 14px
 /*filter*/
 .az-title-wrap
 	display: block
@@ -406,7 +416,6 @@ li
 	margin-top: 10px
 	font-size: 0
 	width: 100%
-	// float: none !important
 .az-filter-t2
 	display: inline-block
 	font-size: 16px
@@ -449,8 +458,6 @@ li
 				border: 1px solid #56cafb
 				background: #56cafb
 				color: #fff
-
-
 
 .az-breadcrumbs
 	font-size: 0
