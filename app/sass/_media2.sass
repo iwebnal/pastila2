@@ -16,7 +16,26 @@
 
 /* Medium Devices, Desktops */
 @media only screen and (max-width : 992px)
-
+	div[class^="col-"]:nth-of-type(6n+2)
+		.az-carousel-wrap
+			left: -60px
+			right: unset
+			.az-carousel-outer
+				margin-left: 0
+				padding: 27px 0px 27px 18px
+				.prev, .next
+					left: 14px
+					right: unset
+	div[class^="col-"]:nth-of-type(4n+2)
+		.az-carousel-wrap
+			left: unset
+			right: -60px
+			.az-carousel-outer
+				margin-left: auto
+				padding: 27px 18px 27px 0
+				.prev, .next
+					left: unset
+					right: 14px
 	
 	/**/
 
@@ -24,7 +43,26 @@
 @media only screen and (max-width : 768px)
 	.az-w100
 		width: 100% !important
-	
+	div[class^="col-"]:nth-of-type(4n+2)
+		.az-carousel-wrap
+			left: -60px
+			right: unset
+			.az-carousel-outer
+				margin-left: 0
+				padding: 27px 0px 27px 18px
+				.prev, .next
+					left: 14px
+					right: unset
+	div[class^="col-"]:nth-of-type(2n+2)
+		.az-carousel-wrap
+			left: unset
+			right: -60px
+			.az-carousel-outer
+				margin-left: auto
+				padding: 27px 18px 27px 0
+				.prev, .next
+					left: unset
+					right: 14px
 	/**/
 
 
@@ -73,6 +111,8 @@
 
 /* Small Devices, Tablets */
 @media only screen and (min-width : 768px)
+	.ah-clear320
+		display: none !important
 	.az-xs-center
 		text-align: left
 	.az-tab-comment
