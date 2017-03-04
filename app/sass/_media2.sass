@@ -111,6 +111,16 @@
 
 /* Small Devices, Tablets */
 @media only screen and (min-width : 768px)
+	.ah-hits-wrapp
+		position: relative
+		cursor: pointer
+		&:hover
+			.az-carousel-wrap
+				opacity: 1
+				z-index: 3
+			.ah-hits-imgbox, .ah-hits-product, .ah-hits-model, .ah-hits-feature, .ah-hits-price
+				position: relative
+				z-index: 6
 	.ah-clear320
 		display: none !important
 	.az-xs-center
