@@ -186,4 +186,84 @@ $(function() {
             return false;
         });
     /*tabs*/
+
+    if(window.matchMedia( "(max-width: 768px)" ).matches){
+        var max_ah_hits_product = 0;
+        var max_ah_hits_model = 0;
+        var ah_hits_product = $(".ah-hits-product");
+        var ah_hits_model = $(".ah-hits-model");
+        var ah_hits_feature = $(".ah-hits-feature");
+
+
+        ah_hits_product.each(function(i){
+            if(i%2==1){
+                if(ah_hits_product.eq(i).height()<ah_hits_product.eq(i-1).height()){
+                    ah_hits_product.eq(i).height(ah_hits_product.eq(i-1).height());
+                } else if(ah_hits_product.eq(i).height()>ah_hits_product.eq(i-1).height()){
+                    ah_hits_product.eq(i-1).height(ah_hits_product.eq(i).height());
+                }
+            }
+        });
+        ah_hits_model.each(function(i){
+            if(i%2==1){
+                if(ah_hits_model.eq(i).height()+ah_hits_model.eq(i).next().height()<ah_hits_model.eq(i-1).height()+ah_hits_model.eq(i-1).next().height()){
+                    ah_hits_model.eq(i).next().height(ah_hits_model.eq(i-1).height()+ah_hits_model.eq(i-1).next().height()-ah_hits_model.eq(i).height());
+                } else if(ah_hits_model.eq(i).height()+ah_hits_model.eq(i).next().height()>ah_hits_model.eq(i-1).height()+ah_hits_model.eq(i-1).next().height()){
+                    ah_hits_model.eq(i-1).next().height(ah_hits_model.eq(i).height()+ah_hits_model.eq(i).next().height()-ah_hits_model.eq(i-1).height());
+                }
+            }
+        });
+    }
+    $(window).resize(function(){
+            max_ah_hits_product = 0;
+            max_ah_hits_model = 0;
+            ah_hits_product.height("auto");
+            ah_hits_feature.height("auto");
+            // var ah_hits_product = $(".ah-hits-product");
+            // var ah_hits_model = $(".ah-hits-model");
+            // var ah_hits_feature = $(".ah-hits-feature");
+
+        if(window.matchMedia( "(max-width: 768px)" ).matches){
+
+            ah_hits_product.each(function(i){
+                if(i%2==1){
+                    if(ah_hits_product.eq(i).height()<ah_hits_product.eq(i-1).height()){
+                        ah_hits_product.eq(i).height(ah_hits_product.eq(i-1).height());
+                    } else if(ah_hits_product.eq(i).height()>ah_hits_product.eq(i-1).height()){
+                        ah_hits_product.eq(i-1).height(ah_hits_product.eq(i).height());
+                    }
+                }
+            });
+            ah_hits_model.each(function(i){
+                if(i%2==1){
+                    if(ah_hits_model.eq(i).height()+ah_hits_model.eq(i).next().height()<ah_hits_model.eq(i-1).height()+ah_hits_model.eq(i-1).next().height()){
+                        ah_hits_model.eq(i).next().height(ah_hits_model.eq(i-1).height()+ah_hits_model.eq(i-1).next().height()-ah_hits_model.eq(i).height());
+                    } else if(ah_hits_model.eq(i).height()+ah_hits_model.eq(i).next().height()>ah_hits_model.eq(i-1).height()+ah_hits_model.eq(i-1).next().height()){
+                        ah_hits_model.eq(i-1).next().height(ah_hits_model.eq(i).height()+ah_hits_model.eq(i).next().height()-ah_hits_model.eq(i-1).height());
+                    }
+                }
+            });
+        }
+        // max_ah_hits_product = 0;
+        // max_ah_hits_model = 0;
+        // // var ah_hits_product = $(".ah-hits-product");
+        // // var ah_hits_model = $(".ah-hits-model");
+        // // var ah_hits_feature = $(".ah-hits-feature");
+        // ah_hits_product.each(function(){
+        //     if(max_ah_hits_product < $(this).height()){
+        //         max_ah_hits_product = $(this).height();
+        //     }
+        // });
+        // ah_hits_model.each(function(){
+        //     if(max_ah_hits_model < $(this).height()+$(this).next().height()){
+        //         max_ah_hits_model = $(this).height()+$(this).next().height();
+        //     }
+        // });
+        // ah_hits_product.each(function(){
+        //     $(this).css("min-height", max_ah_hits_product+"px");
+        // });
+        // ah_hits_feature.each(function(){
+        //     $(this).css("min-height", (max_ah_hits_model-$(this).prev().height())+"px");
+        // });
+    });
 });
