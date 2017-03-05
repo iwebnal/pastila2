@@ -186,84 +186,61 @@ $(function() {
             return false;
         });
     /*tabs*/
+        var ah_hits_price
+        var ah_hits_price_margin
+        var az_height1;
+        var az_height2;
+        $(window).load(function(){
+            ah_hits_price = $(".ah-hits-price");
+            ah_hits_price_margin = parseInt(ah_hits_price.eq(0).css("margin-top"));
+            if(window.matchMedia( "(max-width: 768px)" ).matches){
 
-    if(window.matchMedia( "(max-width: 768px)" ).matches){
-        var max_ah_hits_product = 0;
-        var max_ah_hits_model = 0;
-        var ah_hits_product = $(".ah-hits-product");
-        var ah_hits_model = $(".ah-hits-model");
-        var ah_hits_feature = $(".ah-hits-feature");
-
-
-        ah_hits_product.each(function(i){
-            if(i%2==1){
-                if(ah_hits_product.eq(i).height()<ah_hits_product.eq(i-1).height()){
-                    ah_hits_product.eq(i).height(ah_hits_product.eq(i-1).height());
-                } else if(ah_hits_product.eq(i).height()>ah_hits_product.eq(i-1).height()){
-                    ah_hits_product.eq(i-1).height(ah_hits_product.eq(i).height());
-                }
+                ah_hits_price.each(function(i){
+                    if(i%2==1){
+                        var az_height1 = ah_hits_price.eq(i).siblings(".ah-hits-product").height()+ah_hits_price.eq(i).siblings(".ah-hits-model").height()+ah_hits_price.eq(i).siblings(".ah-hits-feature").height();
+                        var az_height2 = ah_hits_price.eq(i-1).siblings(".ah-hits-product").height()+ah_hits_price.eq(i-1).siblings(".ah-hits-model").height()+ah_hits_price.eq(i-1).siblings(".ah-hits-feature").height();
+                        // az_height1 = ah_hits_price.eq(i).siblings(".ah-hits-product").outerHeight(true)?ah_hits_price.eq(i).siblings(".ah-hits-product").outerHeight(true):0+
+                        //                 ah_hits_price.eq(i).siblings(".ah-hits-model").outerHeight(true)?ah_hits_price.eq(i).siblings(".ah-hits-model").outerHeight(true):0+
+                        //                 ah_hits_price.eq(i).siblings(".ah-hits-feature").outerHeight(true)?ah_hits_price.eq(i).siblings(".ah-hits-feature").outerHeight(true):0;
+                        // az_height2 = ah_hits_price.eq(i-1).siblings(".ah-hits-product").outerHeight(true)?ah_hits_price.eq(i-1).siblings(".ah-hits-product").outerHeight(true):0+
+                        //                 ah_hits_price.eq(i-1).siblings(".ah-hits-model").outerHeight(true)?ah_hits_price.eq(i-1).siblings(".ah-hits-model").outerHeight(true):0+
+                        //                 ah_hits_price.eq(i-1).siblings(".ah-hits-feature").outerHeight(true)?ah_hits_price.eq(i-1).siblings(".ah-hits-feature").outerHeight(true):0;
+                        // alert(az_height1+"/"+az_height2)
+                        if(az_height1<az_height2){
+                            ah_hits_price.eq(i).css("margin-top", (az_height2-az_height1+ah_hits_price_margin)+"px");
+                        } else if(az_height1>az_height2){
+                            ah_hits_price.eq(i-1).css("margin-top", (az_height1-az_height2+ah_hits_price_margin)+"px");
+                        }
+                    }
+                });
             }
         });
-        ah_hits_model.each(function(i){
-            if(i%2==1){
-                if(ah_hits_model.eq(i).height()+ah_hits_model.eq(i).next().height()<ah_hits_model.eq(i-1).height()+ah_hits_model.eq(i-1).next().height()){
-                    ah_hits_model.eq(i).next().height(ah_hits_model.eq(i-1).height()+ah_hits_model.eq(i-1).next().height()-ah_hits_model.eq(i).height());
-                } else if(ah_hits_model.eq(i).height()+ah_hits_model.eq(i).next().height()>ah_hits_model.eq(i-1).height()+ah_hits_model.eq(i-1).next().height()){
-                    ah_hits_model.eq(i-1).next().height(ah_hits_model.eq(i).height()+ah_hits_model.eq(i).next().height()-ah_hits_model.eq(i-1).height());
-                }
+        $(window).resize(function(){
+            ah_hits_price.each(function(){
+                $(this).css("margin-top", ah_hits_price_margin+"px");
+            });
+            if(window.matchMedia( "(max-width: 768px)" ).matches){
+                ah_hits_price.each(function(i){
+                    if(i%2==1&&i<3){
+                        az_height1 = ah_hits_price.eq(i).siblings(".ah-hits-product").height()+ah_hits_price.eq(i).siblings(".ah-hits-model").height()+ah_hits_price.eq(i).siblings(".ah-hits-feature").height();
+                        az_height2 = ah_hits_price.eq(i-1).siblings(".ah-hits-product").height()+ah_hits_price.eq(i-1).siblings(".ah-hits-model").height()+ah_hits_price.eq(i-1).siblings(".ah-hits-feature").height();
+
+                        // az_height1 = ah_hits_price.eq(i).siblings(".ah-hits-product").outerHeight()?ah_hits_price.eq(i).siblings(".ah-hits-product").outerHeight():0+
+                        //                 ah_hits_price.eq(i).siblings(".ah-hits-model").outerHeight()?ah_hits_price.eq(i).siblings(".ah-hits-model").outerHeight():0+
+                        //                 ah_hits_price.eq(i).siblings(".ah-hits-feature").outerHeight()?ah_hits_price.eq(i).siblings(".ah-hits-feature").outerHeight():0;
+                        // az_height2 = ah_hits_price.eq(i-1).siblings(".ah-hits-product").outerHeight()?ah_hits_price.eq(i-1).siblings(".ah-hits-product").outerHeight():0+
+                        //                 ah_hits_price.eq(i-1).siblings(".ah-hits-model").outerHeight()?ah_hits_price.eq(i-1).siblings(".ah-hits-model").outerHeight():0+
+                        //                 ah_hits_price.eq(i-1).siblings(".ah-hits-feature").outerHeight()?ah_hits_price.eq(i-1).siblings(".ah-hits-feature").outerHeight():0;
+                        // alert(ah_hits_price_margin);
+                        // alert(az_height1+"/"+az_height2)
+                        if(az_height1<az_height2){
+                            ah_hits_price.eq(i).css("margin-top", (az_height2-az_height1+ah_hits_price_margin)+"px");
+                        } else if(az_height1>az_height2){
+                            ah_hits_price.eq(i-1).css("margin-top", (az_height1-az_height2+ah_hits_price_margin)+"px");
+                        }
+                    }
+                });
+            // alert(1);
             }
         });
-    }
-    $(window).resize(function(){
-            max_ah_hits_product = 0;
-            max_ah_hits_model = 0;
-            ah_hits_product.height("auto");
-            ah_hits_feature.height("auto");
-            // var ah_hits_product = $(".ah-hits-product");
-            // var ah_hits_model = $(".ah-hits-model");
-            // var ah_hits_feature = $(".ah-hits-feature");
-
-        if(window.matchMedia( "(max-width: 768px)" ).matches){
-
-            ah_hits_product.each(function(i){
-                if(i%2==1){
-                    if(ah_hits_product.eq(i).height()<ah_hits_product.eq(i-1).height()){
-                        ah_hits_product.eq(i).height(ah_hits_product.eq(i-1).height());
-                    } else if(ah_hits_product.eq(i).height()>ah_hits_product.eq(i-1).height()){
-                        ah_hits_product.eq(i-1).height(ah_hits_product.eq(i).height());
-                    }
-                }
-            });
-            ah_hits_model.each(function(i){
-                if(i%2==1){
-                    if(ah_hits_model.eq(i).height()+ah_hits_model.eq(i).next().height()<ah_hits_model.eq(i-1).height()+ah_hits_model.eq(i-1).next().height()){
-                        ah_hits_model.eq(i).next().height(ah_hits_model.eq(i-1).height()+ah_hits_model.eq(i-1).next().height()-ah_hits_model.eq(i).height());
-                    } else if(ah_hits_model.eq(i).height()+ah_hits_model.eq(i).next().height()>ah_hits_model.eq(i-1).height()+ah_hits_model.eq(i-1).next().height()){
-                        ah_hits_model.eq(i-1).next().height(ah_hits_model.eq(i).height()+ah_hits_model.eq(i).next().height()-ah_hits_model.eq(i-1).height());
-                    }
-                }
-            });
-        }
-        // max_ah_hits_product = 0;
-        // max_ah_hits_model = 0;
-        // // var ah_hits_product = $(".ah-hits-product");
-        // // var ah_hits_model = $(".ah-hits-model");
-        // // var ah_hits_feature = $(".ah-hits-feature");
-        // ah_hits_product.each(function(){
-        //     if(max_ah_hits_product < $(this).height()){
-        //         max_ah_hits_product = $(this).height();
-        //     }
-        // });
-        // ah_hits_model.each(function(){
-        //     if(max_ah_hits_model < $(this).height()+$(this).next().height()){
-        //         max_ah_hits_model = $(this).height()+$(this).next().height();
-        //     }
-        // });
-        // ah_hits_product.each(function(){
-        //     $(this).css("min-height", max_ah_hits_product+"px");
-        // });
-        // ah_hits_feature.each(function(){
-        //     $(this).css("min-height", (max_ah_hits_model-$(this).prev().height())+"px");
-        // });
-    });
 });
