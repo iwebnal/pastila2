@@ -80,8 +80,9 @@ li
 		&:hover, &.active
 			background: #969696
 			color: #d4d4d4
-	ul
+	>li>ul
 		display: none
+
 .az-cart-menu, .az-user-menu
 	padding-left: 36px
 	height: 46px
@@ -185,11 +186,11 @@ li
 .az-carousel-wrap
 	position: absolute
 	top: -11px
-	left: -60px
+	left: -50px
 	
 	// opacity: 1
 	// z-index: 3
-	width: calc(100% + 60px)
+	width: calc(100% + 50px)//calc(100% + 60px)
 	height: calc(100% + 22px)
 	overflow: hidden
 	border: 2px solid #e3e3e3
@@ -207,16 +208,16 @@ li
 	// 			left: unset
 	// 			right: 14px
 	.az-carousel-outer
-		width: 60px
+		width: 55px//60px
 		background: #fff
 		// padding-left: 12px
 		// position: relative
-		padding: 27px 0px 27px 18px
+		padding: 27px 0px 27px 2px//27px 0px 27px 10px
 		font-size: 0
 		.prev, .next
 			position: absolute
 			// top: 0
-			left: 14px
+			left: 3px//10px
 			// transform: translate(-50%, 0)
 			border: none
 			width: 48px
@@ -243,20 +244,28 @@ li
 			// height: 17px
 .az-carousel
 	li
+		width: 50px
+		height: 77px
+		margin-bottom: 15px
+		text-align: center
+		vertical-align: middle
+		line-height: 77px
 		img
-			margin-bottom: 15px
-			width: 37px
-			height: 77px
+			display: inline-block
+			max-width: 100%
+			width: auto
+			max-height: 100%
+			height: auto
 div[class^="col-"]:nth-of-type(6n+2)
 	.az-carousel-wrap
 		left: unset
-		right: -60px
+		right: -50px
 		.az-carousel-outer
 			margin-left: auto
-			padding: 27px 18px 27px 0
+			padding: 27px 2px 27px 0
 			.prev, .next
 				left: unset
-				right: 14px
+				right: 5px
 
 /*filter*/
 .az-title-wrap

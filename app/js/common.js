@@ -186,4 +186,61 @@ $(function() {
             return false;
         });
     /*tabs*/
+        var ah_hits_price
+        var ah_hits_price_margin
+        var az_height1;
+        var az_height2;
+        $(window).load(function(){
+            ah_hits_price = $(".ah-hits-price");
+            ah_hits_price_margin = parseInt(ah_hits_price.eq(0).css("margin-top"));
+            if(window.matchMedia( "(max-width: 768px)" ).matches){
+
+                ah_hits_price.each(function(i){
+                    if(i%2==1){
+                        var az_height1 = ah_hits_price.eq(i).siblings(".ah-hits-product").height()+ah_hits_price.eq(i).siblings(".ah-hits-model").height()+ah_hits_price.eq(i).siblings(".ah-hits-feature").height();
+                        var az_height2 = ah_hits_price.eq(i-1).siblings(".ah-hits-product").height()+ah_hits_price.eq(i-1).siblings(".ah-hits-model").height()+ah_hits_price.eq(i-1).siblings(".ah-hits-feature").height();
+                        // az_height1 = ah_hits_price.eq(i).siblings(".ah-hits-product").outerHeight(true)?ah_hits_price.eq(i).siblings(".ah-hits-product").outerHeight(true):0+
+                        //                 ah_hits_price.eq(i).siblings(".ah-hits-model").outerHeight(true)?ah_hits_price.eq(i).siblings(".ah-hits-model").outerHeight(true):0+
+                        //                 ah_hits_price.eq(i).siblings(".ah-hits-feature").outerHeight(true)?ah_hits_price.eq(i).siblings(".ah-hits-feature").outerHeight(true):0;
+                        // az_height2 = ah_hits_price.eq(i-1).siblings(".ah-hits-product").outerHeight(true)?ah_hits_price.eq(i-1).siblings(".ah-hits-product").outerHeight(true):0+
+                        //                 ah_hits_price.eq(i-1).siblings(".ah-hits-model").outerHeight(true)?ah_hits_price.eq(i-1).siblings(".ah-hits-model").outerHeight(true):0+
+                        //                 ah_hits_price.eq(i-1).siblings(".ah-hits-feature").outerHeight(true)?ah_hits_price.eq(i-1).siblings(".ah-hits-feature").outerHeight(true):0;
+                        // alert(az_height1+"/"+az_height2)
+                        if(az_height1<az_height2){
+                            ah_hits_price.eq(i).css("margin-top", (az_height2-az_height1+ah_hits_price_margin)+"px");
+                        } else if(az_height1>az_height2){
+                            ah_hits_price.eq(i-1).css("margin-top", (az_height1-az_height2+ah_hits_price_margin)+"px");
+                        }
+                    }
+                });
+            }
+        });
+        $(window).resize(function(){
+            ah_hits_price.each(function(){
+                $(this).css("margin-top", ah_hits_price_margin+"px");
+            });
+            if(window.matchMedia( "(max-width: 768px)" ).matches){
+                ah_hits_price.each(function(i){
+                    if(i%2==1&&i<3){
+                        az_height1 = ah_hits_price.eq(i).siblings(".ah-hits-product").height()+ah_hits_price.eq(i).siblings(".ah-hits-model").height()+ah_hits_price.eq(i).siblings(".ah-hits-feature").height();
+                        az_height2 = ah_hits_price.eq(i-1).siblings(".ah-hits-product").height()+ah_hits_price.eq(i-1).siblings(".ah-hits-model").height()+ah_hits_price.eq(i-1).siblings(".ah-hits-feature").height();
+
+                        // az_height1 = ah_hits_price.eq(i).siblings(".ah-hits-product").outerHeight()?ah_hits_price.eq(i).siblings(".ah-hits-product").outerHeight():0+
+                        //                 ah_hits_price.eq(i).siblings(".ah-hits-model").outerHeight()?ah_hits_price.eq(i).siblings(".ah-hits-model").outerHeight():0+
+                        //                 ah_hits_price.eq(i).siblings(".ah-hits-feature").outerHeight()?ah_hits_price.eq(i).siblings(".ah-hits-feature").outerHeight():0;
+                        // az_height2 = ah_hits_price.eq(i-1).siblings(".ah-hits-product").outerHeight()?ah_hits_price.eq(i-1).siblings(".ah-hits-product").outerHeight():0+
+                        //                 ah_hits_price.eq(i-1).siblings(".ah-hits-model").outerHeight()?ah_hits_price.eq(i-1).siblings(".ah-hits-model").outerHeight():0+
+                        //                 ah_hits_price.eq(i-1).siblings(".ah-hits-feature").outerHeight()?ah_hits_price.eq(i-1).siblings(".ah-hits-feature").outerHeight():0;
+                        // alert(ah_hits_price_margin);
+                        // alert(az_height1+"/"+az_height2)
+                        if(az_height1<az_height2){
+                            ah_hits_price.eq(i).css("margin-top", (az_height2-az_height1+ah_hits_price_margin)+"px");
+                        } else if(az_height1>az_height2){
+                            ah_hits_price.eq(i-1).css("margin-top", (az_height1-az_height2+ah_hits_price_margin)+"px");
+                        }
+                    }
+                });
+            // alert(1);
+            }
+        });
 });
